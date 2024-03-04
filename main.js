@@ -9,10 +9,14 @@ function sayTemperature() {
     let message  = 'Ваша температура: ' + randomItem
     // alert(message);
     printTemperature.innerHTML = randomItem;
+
+    if (randomItem >= 39.0) {
+        setTimeout("alert('Мы уже вызвали скорую!')", 2000);
+    }
 }
 
 
 button.addEventListener('click', function () {
-    setTimeout(sayTemperature, 3000);
+    setTimeout(sayTemperature, 1000);
 })
 
